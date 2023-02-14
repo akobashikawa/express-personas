@@ -50,3 +50,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 ## Ramas
 
 - Cada rama contiene un caso desarrollado.
+
+### [Base](https://github.com/akobashikawa/express-personas/tree/base)
+
+- Un punto de partida
+
