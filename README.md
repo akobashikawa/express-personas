@@ -47,7 +47,7 @@ app.use('/', indexRouter);
 app.use(express.static(path.join(__dirname, 'public')));
 ```
 
-## Hola Mundo
+## Hola
 
-- Saludar a todos
-- El saludo está hardcodeado en el frontend.
+- Saludar a alguien
+- El saludo viene del backend.
