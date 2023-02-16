@@ -47,7 +47,6 @@ app.use('/', indexRouter);
 app.use(express.static(path.join(__dirname, 'public')));
 ```
 
-## Hola
+### [Personas](https://github.com/akobashikawa/express-personas/tree/personas)
 
-- Saludar a alguien
-- El saludo viene del backend.
+- Lista de personas
