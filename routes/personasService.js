@@ -14,6 +14,11 @@ const personasService = {
         return this.personas;
     },
 
+    traer(id) {
+        const found = this.personas.find(item => item.id == id);
+        return found;
+    },
+
     agregar(nombre) {
         this.id = this.id + 1;
         const persona = { id: this.id, nombre };
