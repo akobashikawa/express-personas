@@ -38,7 +38,7 @@
                     <td>{{ persona.nombre }}</td>
                     <td>
                         <button class="btn btn-danger btn-sm" @click="eliminar(persona)">Eliminar</button>
-                        <button class="btn btn-primary btn-sm" @click="abrirModal(persona)">Editar</button>
+                        <button class="btn btn-primary btn-sm mx-1" @click="abrirModal(persona)">Editar</button>
                     </td>
                 </tr>
             </tbody>
@@ -49,18 +49,16 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Persona</h1>
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Editar Persona</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
+                        <p>id: {{ personaEditada.id }}</p>
                         <input type="text" class="form-control" placeholder="Nombre" v-model="personaEditada.nombre">
-
-                        <p>
-                            <button class="btn btn-primary mt-2" @click="guardar">Guardar</button>
-                        </p>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary" @click="guardar">Guardar</button>
                     </div>
                 </div>
             </div>
