@@ -123,7 +123,7 @@
                 },
 
                 async guardar() {
-                    const url = `/personas/${personaEditada.id}`;
+                    const url = `/personas/${this.personaEditada.id}`;
                     const body = { nombre: this.personaEditada.nombre };
 
                     try {

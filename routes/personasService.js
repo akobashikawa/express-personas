@@ -27,6 +27,12 @@ const personasService = {
         return persona;
     },
 
+    guardar(id, nombre) {
+        const found = this.personas.find(item => item.id == id);
+        found.nombre = nombre;
+        return found;
+    },
+
     eliminar(id) {
         const foundIndex = this.personas.findIndex(item => item.id == id);
         // console.log({foundIndex});

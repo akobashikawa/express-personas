@@ -23,8 +23,8 @@ router.post('/personas/', (req, res) => {
 router.put('/personas/:id', (req, res) => {
   const id = req.params.id;
   const nombre = req.body.nombre;
-  const nuevaPersona = personasService.guardar(id, nombre);
-  return res.json(nuevaPersona);
+  const persona = personasService.guardar(id, nombre);
+  return res.json(persona);
 });
 
 router.delete('/personas/:id', (req, res) => {
