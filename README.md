@@ -63,3 +63,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 - Saludar a alguien
 
+### [Personas](https://github.com/akobashikawa/express-personas/tree/personas)
+
+- Lista de personas
