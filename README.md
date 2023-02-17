@@ -51,3 +51,4 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 - Saludar a todos
 - El saludo está hardcodeado en el frontend.
+- Otro saludo viene del backend.

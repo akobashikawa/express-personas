@@ -7,8 +7,43 @@
 
 <body>
   <div id="app" class="container">
-    <h1>Hola Mundo!</h1>
+    <h1>Hola Mundo! [fuente frontend]</h1>
+    <h1>{{ saludo }} [fuente backend]</h1>
   </div>
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+  <script>
+    const { createApp } = Vue;
+    
+    createApp({
+        data() {
+            return {
+                saludo: '',
+            };
+        },
+
+        methods: {
+            holamundo() {
+                const url = '/holamundo';
+                axios.get(url)
+                    .then(response => {
+                        this.saludo = response.data.saludo;
+                        this.error = '';
+                    })
+                    .catch(error => {
+                        this.saludo = '';
+                        this.error = 'Error: ' + error;
+                    });
+            }
+        },
+
+        mounted() {
+          this.holamundo();
+        }
+    }).mount('#app');  
+  </script>
 </body>
 
 </html>
