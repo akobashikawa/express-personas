@@ -66,3 +66,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 ### [Personas](https://github.com/akobashikawa/express-personas/tree/personas)
 
 - Lista de personas
+
+### [Personas CORS](https://github.com/akobashikawa/express-personas/tree/personas-cors)
+
+- Con CORS para poder usado por otro frontend
+
