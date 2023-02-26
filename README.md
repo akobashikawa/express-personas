@@ -47,6 +47,12 @@ app.use('/', indexRouter);
 app.use(express.static(path.join(__dirname, 'public')));
 ```
 
-### [Personas](https://github.com/akobashikawa/express-personas/tree/personas)
+### [Personas CORS](https://github.com/akobashikawa/express-personas/tree/personas-cors)
 
-- Lista de personas
+- Con CORS para poder usado por otro frontend
+
+```js
+// app.js
+var cors = require('cors');
+app.use(cors());
+```
