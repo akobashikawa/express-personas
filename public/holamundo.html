@@ -7,8 +7,12 @@
 
 <body>
   <div id="app" class="container">
-    <h1>Hola Mundo! [fuente frontend]</h1>
-    <h1>{{ saludo }} [fuente backend]</h1>
+    <h1>Hola Mundo</h1>
+
+    <button class="btn btn-primary mt-2" @click="hola">Hola</button>
+
+    <h2 class="text-bg-success p-3 my-2" v-if="saludo">{{ saludo }}</h2>
+    <p class="text-bg-danger p-3 my-2" v-if="error">{{ error }}</p>
   </div>
 
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
@@ -20,12 +24,14 @@
     createApp({
         data() {
             return {
+                nombre: '',
                 saludo: '',
+                error: '',
             };
         },
 
         methods: {
-            holamundo() {
+            hola() {
                 const url = '/holamundo';
                 axios.get(url)
                     .then(response => {
@@ -37,13 +43,10 @@
                         this.error = 'Error: ' + error;
                     });
             }
-        },
-
-        mounted() {
-          this.holamundo();
         }
     }).mount('#app');  
   </script>
+
 </body>
 
 </html>
