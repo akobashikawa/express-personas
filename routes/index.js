@@ -1,7 +1,12 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
+router.get('/hola/', (req, res) => {
+  return res.json({
+    saludo: `Hola Mundo!`
+  });
+});
+
 router.post('/hola/', (req, res) => {
   const nombre = req.body.nombre;
   return res.json({
