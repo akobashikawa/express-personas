@@ -47,12 +47,41 @@ app.use('/', indexRouter);
 app.use(express.static(path.join(__dirname, 'public')));
 ```
 
-### [Personas CORS](https://github.com/akobashikawa/express-personas/tree/personas-cors)
+### Personas Swagger
 
-- Con CORS para poder usado por otro frontend
+- Con Swagger para autogenerar la documentación del backend.
+
+```js
+"scripts": {
+    "start": "npm run gendoc && node ./bin/www",
+    "dev": "npm run gendoc && nodemon ./bin/www",
+    "gendoc": "node swagger.js"
+},
+```
+
+```js
+// swagger.json
+const swaggerAutogen = require('swagger-autogen')();
+
+const doc = {
+  info: {
+    title: 'Personas API',
+    description: 'API REST para Personas',
+  },
+  host: 'localhost:3000',
+  schemes: ['http'],
+};
+
+const outputFile = './swagger-output.json';
+const endpointsFiles = ['./app.js'];
+
+swaggerAutogen(outputFile, endpointsFiles, doc);
+```
 
 ```js
 // app.js
-var cors = require('cors');
-app.use(cors());
+const swaggerUi = require('swagger-ui-express');
+const swaggerFile = require('./swagger-output.json');
+//...
+app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile));
 ```

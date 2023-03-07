@@ -1,15 +1,15 @@
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
-var cors = require('cors');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
+const cors = require('cors');
 const swaggerUi = require('swagger-ui-express');
 const swaggerFile = require('./swagger-output.json');
 
-var holaRouter = require('./routes/holaRouter');
-var personasRouter = require('./routes/personasRouter');
+const holaRouter = require('./routes/holaRouter');
+const personasRouter = require('./routes/personasRouter');
 
-var app = express();
+const app = express();
 
 app.use(cors());
 
