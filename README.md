@@ -69,5 +69,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 ### [Personas CORS](https://github.com/akobashikawa/express-personas/tree/personas-cors)
 
-- Con CORS para poder usado por otro frontend
+- Con CORS, para poder ser usado por otro frontend.
 
+### [Personas Swagger](https://github.com/akobashikawa/express-personas/tree/personas-swagger)
+
+- Con Swagger, para documentar el backend.
