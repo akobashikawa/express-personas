@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-router.get('/hola/', (req, res) => {
+router.get('/holamundo/', (req, res) => {
   return res.json({
     saludo: `Hola Mundo!`
   });
