@@ -11,7 +11,7 @@
     "http"
   ],
   "paths": {
-    "/hola/": {
+    "/holamndo": {
       "get": {
         "summary": "Devuelve un saludo al mundo",
         "description": "",
@@ -21,7 +21,9 @@
             "description": "OK"
           }
         }
-      },
+      }
+    },
+    "/hola": {
       "post": {
         "summary": "Devuelve un saludo a la persona indicada",
         "description": "",

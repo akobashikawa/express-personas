@@ -6,7 +6,7 @@ const cors = require('cors');
 const swaggerUi = require('swagger-ui-express');
 const swaggerFile = require('./swagger-output.json');
 
-const holaRouter = require('./routes/holaRouter');
+const indexRouter = require('./routes/indexRouter');
 const personasRouter = require('./routes/personasRouter');
 
 const app = express();
@@ -19,7 +19,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/hola', holaRouter);
+app.use('/', indexRouter);
 app.use('/personas', personasRouter);
 app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
