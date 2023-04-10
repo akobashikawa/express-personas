@@ -74,3 +74,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 ### [Personas Swagger](https://github.com/akobashikawa/express-personas/tree/personas-swagger)
 
 - Con Swagger, para documentar el backend.
+
+### [Notas](https://github.com/akobashikawa/express-personas/tree/personas-notas)
+
+- Lista de notas
