@@ -47,6 +47,6 @@ app.use('/', indexRouter);
 app.use(express.static(path.join(__dirname, 'public')));
 ```
 
-### [Personas](https://github.com/akobashikawa/express-personas/tree/personas)
+### [Notas](https://github.com/akobashikawa/express-personas/tree/personas-notas)
 
-- Lista de personas
+- Lista de notas
